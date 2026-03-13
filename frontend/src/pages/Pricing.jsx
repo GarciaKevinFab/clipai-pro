@@ -302,7 +302,7 @@ export default function Pricing() {
   } = useQuery({
     queryKey: ['plans'],
     queryFn: () => catalogAPI.plans(),
-    select: (res) => res.data,
+    select: (res) => res.data?.results || res.data || [],
   })
 
   const handleSelectPlan = (plan) => {
