@@ -20,7 +20,7 @@ export default function PaymentHistory() {
     queryFn: () => paymentsAPI.history().then((res) => res.data),
   })
 
-  const payments = data?.results ?? data ?? []
+  const payments = data?.results ?? []
 
   const formatDate = (dateStr) => {
     if (!dateStr) return '-'

@@ -33,7 +33,7 @@ export default function MusicModal({ isOpen, onClose, onSelect, selectedId }) {
     enabled: isOpen,
   })
 
-  const tracks = musicData?.results || musicData || []
+  const tracks = musicData?.results ?? []
 
   const filteredTracks = useMemo(() => {
     if (categoryFilter === 'all') return tracks

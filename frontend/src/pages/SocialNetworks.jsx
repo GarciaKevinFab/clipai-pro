@@ -68,7 +68,7 @@ export default function SocialNetworks() {
     queryFn: () => socialAPI.accounts().then((res) => res.data),
   })
 
-  const accounts = data?.results ?? data ?? []
+  const accounts = data?.results ?? []
 
   // Show success toast if redirected back with ?connected=
   useEffect(() => {

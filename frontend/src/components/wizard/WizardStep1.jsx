@@ -36,7 +36,7 @@ export default function WizardStep1({ formData, setFormData }) {
     select: (res) => res.data,
   })
 
-  const styles = stylesData?.results || stylesData || []
+  const styles = stylesData?.results ?? []
 
   const updateField = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }))

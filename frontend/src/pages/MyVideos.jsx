@@ -142,7 +142,7 @@ export default function MyVideos() {
         .list({ status: activeFilter || undefined, page })
         .then((res) => res.data),
     onSuccess: (newData) => {
-      const results = newData?.results ?? newData ?? []
+      const results = newData?.results ?? []
       if (page === 1) {
         setAllVideos(results)
       } else {
@@ -178,7 +178,7 @@ export default function MyVideos() {
   }
 
   // Derive displayed videos
-  const videos = allVideos.length > 0 ? allVideos : (data?.results ?? data ?? [])
+  const videos = allVideos.length > 0 ? allVideos : (data?.results ?? [])
 
   return (
     <div className="max-w-6xl mx-auto space-y-6">

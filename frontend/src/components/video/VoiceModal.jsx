@@ -22,7 +22,7 @@ export default function VoiceModal({ isOpen, onClose, onSelect, selectedId }) {
     enabled: isOpen,
   })
 
-  const voices = voicesData?.results || voicesData || []
+  const voices = voicesData?.results ?? []
 
   const filteredVoices = useMemo(() => {
     return voices.filter((voice) => {

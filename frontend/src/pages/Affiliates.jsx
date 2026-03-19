@@ -269,7 +269,7 @@ export default function Affiliates() {
 
   const isAffiliate = profile?.is_affiliate
   const referralLink = linkData?.url || linkData?.link || ''
-  const referrals = referralsData?.results ?? referralsData ?? []
+  const referrals = referralsData?.results ?? []
 
   if (profileLoading) {
     return (
